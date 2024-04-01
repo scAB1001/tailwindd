@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting Started with Chart JS with www.chartjs3.com</title>
+    <link rel="stylesheet" href="z.css">
+</head>
+
+<body>
+    <div class="chartCard">
+        <div class="chartBox">
+            <div class="pseudoYAxis">
+                <!-- You will manually add y-axis labels here, if necessary -->
+            </div>
+            <div class="container">
+                <div class="containerBody">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+        const response = [
+            { "User": "User 1", "Expected Revenue": 1000 },
+            { "User": "User 2", "Expected Revenue": 2000 },
+            { "User": "User 3", "Expected Revenue": 3000 },
+            { "User": "User 4", "Expected Revenue": 4000 },
+            { "User": "User 5", "Expected Revenue": 5000 },
+            { "User": "User 6", "Expected Revenue": 6000 },
+            { "User": "User 7", "Expected Revenue": 7000 },
+            { "User": "User 8", "Expected Revenue": 8000 },
+            { "User": "User 9", "Expected Revenue": 9000 },
+            { "User": "User 10", "Expected Revenue": 10000 },
+            { "User": "User 11", "Expected Revenue": 11000 },
+            { "User": "User 12", "Expected Revenue": 12000 },
+            { "User": "User 13", "Expected Revenue": 13000 },
+            { "User": "User 14", "Expected Revenue": 14000 },
+            { "User": "User 15", "Expected Revenue": 15000 },
+            { "User": "User 16", "Expected Revenue": 16000 },
+            { "User": "User 17", "Expected Revenue": 17000 },
+            { "User": "User 18", "Expected Revenue": 18000 },
+            { "User": "User 19", "Expected Revenue": 19000 },
+            { "User": "User 20", "Expected Revenue": 20000 }
+        ];
+
+        const labels = response.map(projection => projection['User']);
+        const moneyData = response.map(projection => projection['Expected Revenue']);
+
+        // setup 
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Expected Revenue',
+                data: moneyData,
+                backgroundColor: 'rgba(53, 162, 235, 0.5)',
+                borderColor: 'rgba(0, 0, 0, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        // config 
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // render init block
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+
+        const containerBody = document.querySelector('.containerBody');
+        const totalLabels = myChart.data.labels.length;
+        if (totalLabels > 5) {
+            const newWidth = 700 + ((totalLabels - 5) * 150);
+            containerBody.style.width = `${newWidth}px`;
+        }
+    </script>
+
+</body>
+
+</html>

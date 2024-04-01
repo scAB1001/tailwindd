@@ -1,0 +1,175 @@
+/* Adjust the overall application theme as necessary */
+.projections-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #E4FFE7;
+    color: #009379;
+}
+
+/* New CSS for layout */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    /* Adjust as necessary */
+    background-color: #64c471;
+    align-items: flex-start;
+    border-radius: 10px;
+    /* Keeps items aligned at the top */
+}
+
+.chart-container {
+    flex: 3;
+    border-radius: 10px;
+    margin: 20px;
+    /* Allocates more space to the chart */
+    width: 500px;
+    /* Width for 5 bars */
+    overflow-x: auto;
+    /* Enables horizontal scrolling */
+    white-space: nowrap;
+    /* Ensures bars are in a single line */
+}
+
+.chart-scroll-container {
+    width: 500px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.chart-scroll-container canvas {
+    display: block;
+    /* This ensures the canvas doesn't wrap and respects the container's scrolling */
+}
+
+.projections-title,
+.weeks-ahead-title {
+    color: #1b201d;
+    /* Heading color to match the plan heading color */
+}
+
+.table-container {
+    flex: 1;
+    /* Allocates less space to the table, making it a small box */
+    padding: 0 20px;
+    overflow-x: auto;
+    /* Optional: Adds some padding around the table for spacing */
+}
+
+.weeks-input-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    /* Color for text to maintain readability and consistency */
+}
+
+
+.weeks-input-container input[type='number'] {
+    width: 80px;
+    /* Set a fixed width large enough for the content and some padding */
+    padding: 5px;
+    /* Add some padding inside the input box */
+    text-align: center;
+    /* Center the text inside the input box */
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+
+.weeks-input-container button {
+    background-color: #02bb8d;
+    /* Your theme's button color */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    user-select: none;
+    /* Prevents the text in the button from being selectable */
+}
+
+.weeks-input-container button:hover {
+    background-color: #00785a;
+    /* A darker shade on hover */
+}
+
+.weeks-input-container button:active {
+    transform: scale(0.95);
+    /* Slightly shrink the button when clicked */
+}
+
+.projections-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    /* Table background */
+    border: 1px solid #ffffff;
+    /* Match feature border style */
+    border-radius: 5px;
+    /* Rounded corners like feature and plan */
+}
+
+.projections-table th,
+.projections-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: #333;
+}
+
+.projections-table th {
+    background-color: #f4f4f4;
+    /* Header background */
+}
+
+.projections-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Even row background for readability */
+}
+
+.total-revenue-row td {
+    font-weight: bold;
+    background-color: #e7f4ff;
+    color: #000;
+    /* Total revenue row background for emphasis */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.chartCard {
+    width: 100vw;
+    height: calc(100vh - 40px);
+    background: rgba(54, 162, 235, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chartBox {
+    width: 1000px;
+    height: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px rgba(54, 162, 235, 1);
+    background: white;
+}
+
+.container {
+    width: 800px;
+    max-width: 800px;
+    overflow-x: scroll;
+}
+
+.containerBody {
+    height: 700px;
+}

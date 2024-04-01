@@ -1,38 +1,231 @@
-.App {
+body {
+  margin: 10px;
+  padding: 0;
+  background-color: #0DCA6F;
+  height: 100vh;
+}
+
+/* .nav
+{
+  /* background-color: #0DCA6F; */
+/* } */
+
+.nav ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: black 2px solid;
+  overflow: hidden;
+}
+
+.nav li {
+  float: left;
+  display: block;
+  font-weight: bold;
+}
+
+.nav li a {
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  color: rgb(2, 0, 0);
+}
+
+.nav li a:hover {
+  color: darkgreen;
+}
+
+.nav li a.active {
+  color: red;
+  background-color: red;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+Marker {
+  background-color: red;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.whiteBox {
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  margin: 40px;
+  padding: 20px;
+  border-color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.side-panel-container {
+  height: 100%;
+  width: 20vw;
+  z-index: 1001;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+
+  padding: 25px 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.side-panel-design {
+  width: 100%;
+  height: 100%;
+
+  background-color: #FFFFFF;
+  border-radius: 25px;
+
+  box-sizing: border-box;
+  border: 5px #0DCA6F solid;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.map-panel-container {
+  height: 30%;
+  width: 15vw;
+  position: absolute;
+  z-index: 1001;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  overflow-x: hidden;
+
+  padding: 25px 5px;
+}
+
+.map-panel-design {
+  width: 100%;
+  height: 100%;
+
+  background-color: #FFFFFF;
+  border-radius: 25px;
+
+  box-sizing: border-box;
+  border: 5px #0DCA6F solid;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+div.journey-page-container {
+  height: calc(100vh - 80px);
+
+  position: relative;
+}
+
+.download-delete-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.download-delete-button {
+  border-radius: 25px;
+
+  width: 86px;
+
+  padding-right: 5px;
+  padding-left: 5px;
+
+  background-color: #009379;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.download-delete-button:hover {
+  background-color: #E91E63;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.side-panel-toggle {
+  position: relative;
+  float: left;
+  z-index: 1002;
+  margin-left: calc(20vw + 10px);
+  margin-top: calc(25% - 10px);
+  border: solid black;
+  background-color: #0078A8;
+  width: 10px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.grey-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.upload-form-content {
+  position: relative;
+  background-color: white;
+
+  background-color: #FFFFFF;
+  border-radius: 25px;
+
+  box-sizing: border-box;
+  border: 5px #0DCA6F solid;
+}
+
+.upload-button {
+  border-radius: 25px;
+
+  width: 100%;
+
+  padding-right: 5px;
+  padding-left: 5px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  background-color: #009379;
+  color: white;
+}
+
+.download-delete-button:hover {
+  background-color: #E91E63;
+}
+
+.exit-upload-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+
+  color: black;
+}
+
+.exit-upload-form:hover {
+  color: red;
+}
+
+.map-showcase-container {
+  width: 450px;
+  height: 450px;
+  background-color: #0DCA6F;
+  position: relative;
+  left: 0;
 }

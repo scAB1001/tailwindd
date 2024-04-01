@@ -1,0 +1,9 @@
+.chart-scroll-container {
+  width: 500px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.chart-scroll-container canvas {
+  display: block; /* This ensures the canvas doesn't wrap and respects the container's scrolling */
+}
